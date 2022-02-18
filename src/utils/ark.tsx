@@ -38,18 +38,19 @@ import * as Bip44 from "./bip44";
 		}
 
        checkMessageFormat(message);
+       
+       const _path = Bip44.Path.fromString(path).toBytes();
+       const _message = Buffer.from(message);
+       const _list = [_path, _message];
+       const _cat = Buffer.concat(_list);
 
         return new Apdu.Builder(
             Apdu.Flag.CLA,
             Apdu.Flag.INS_SIGN_MESSAGE,
             Apdu.Flag.P1_SINGLE,
             Apdu.Flag.P2_SCHNORR_LEG,
-            Buffer.concat(
-                  [Bip44.Path
-                        .fromString(path).toBytes(),
-                        Buffer.from(
-                              message)
-                  ]),
+            _cat,
+            // Buffer.concat([Bip44.Path.fromString(path).toBytes(),Buffer.from(message)]),
         ).getInstruction().toString().split('/(e0)/');
     }
 
