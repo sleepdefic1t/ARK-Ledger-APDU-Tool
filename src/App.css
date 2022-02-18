@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
@@ -7,7 +7,7 @@ html {
 	margin: 0;
 	list-style: none;
 	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	overflow-x: hidden;
@@ -15,21 +15,21 @@ html {
 
 main {
 	width: 100%;
-    text-align: center;
+	text-align: center;
 	color: white;
 	margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	overflow: hidden;
 	align-items: center;
 }
 
 :root {
-  /* violet */
-  --primary-color: 111, 76, 255;
+	/* violet */
+	--primary-color: 111, 76, 255;
 
-  /* white */
-  --text-color: 256, 256, 256;
+	/* white */
+	--text-color: 256, 256, 256;
 }
 
 .page-header,
@@ -40,18 +40,18 @@ main {
 .transaction {
 	max-width: 720px;
 	width: 100%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	text-align: center;
-    padding: 0px 10px 20px 10px;
+	padding: 0px 10px 20px 10px;
 	box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.5);
 	justify-content: center;
 	max-height: fit-content;
 }
 
-.page-header{
+.page-header {
 	padding: 10px 25px;
 }
 
@@ -62,7 +62,7 @@ main {
 .button-style,
 .button-style-default {
 	color: white;
-    background-color: rgba(var(--primary-color), 0.15);
+	background-color: rgba(var(--primary-color), 0.15);
 	border: 1px solid rgba(var(--primary-color), 0.25);
 	color: rgba(var(--text-color), 0.8);
 	border-radius: 25px;
@@ -84,21 +84,24 @@ main {
 	text-align: left;
 }
 
-#wide-input, #wide-result {
+#wide-input,
+#wide-result {
 	width: 90%;
 	border: 1px solid rgba(var(--primary-color), 0.25);
 }
 
-#wide-result, #result {
+#wide-result,
+#result {
 	text-align: center;
 }
 
 .text-effect {
-    background: linear-gradient(to right, #30cfd0, #c43ad6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: linear-gradient(to right, #30cfd0, #c43ad6);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
 	border: 1px solid transparent;
 }
