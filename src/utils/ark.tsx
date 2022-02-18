@@ -44,7 +44,14 @@ import * as Bip44 from "./bip44";
             Apdu.Flag.INS_SIGN_MESSAGE,
             Apdu.Flag.P1_SINGLE,
             Apdu.Flag.P2_SCHNORR_LEG,
-            Buffer.from(Buffer.concat([Bip44.Path.fromString(path).toBytes(), Buffer.from(message)])),
+            Buffer.from(
+               Buffer.concat(
+                  [
+                     Bip44.Path.fromString(path).toBytes(),
+                     Buffer.from(message)
+                  ]
+               )
+            ),
         ).getInstruction().flat()toString().split('/(e0)/');
     }
 
