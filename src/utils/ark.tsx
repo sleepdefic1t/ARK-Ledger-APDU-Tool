@@ -39,8 +39,8 @@ import * as Bip44 from "./bip44";
 
        checkMessageFormat(message);
        
-       const _path = Bip44.Path.fromString(path).toBytes();
-       const _message = Buffer.from(message);
+       const _path = Buffer.from(Bip44.Path.fromString(path).toString()); 
+       const _message = Buffer.from(message, 'utf8');
        const _list = [_path, _message];
        const _cat = Buffer.concat(_list);
 
